@@ -1,6 +1,7 @@
 使用说明
-excel文件放在excel目录下(可以选择自己修改路径)，可生成lua和xml配置文件在对应文件夹
-在ToLuaAndXml.php的 file 数组中添加文件
-终端 cd 进入此目录 （进入方式 输入 cd+空格+当前目录 按回车，当前目录可以拖动到终端中）
-输入  php ToLuaAndXml.php 即可
+
+1.确保excel内容和实例中格式一样
+2.修改Classes下的AppConfig.php 对应excel及输出lua和xml的文件夹路径
+3.配置好要导出的excel
+4.终端进入到当前工具目录，输入 php init.php即可
 

@@ -16,7 +16,7 @@ class AppConfig
 	*/
 	private static function _initPathConst()
 	{
-		define('ROOT_PATH', getCWD() . '/');//getCWD()获得当前目录
+		define('ROOT_PATH', getCWD() . '/Demo/');// 自定义excel对应的根目录
 		define('EXCEL_PATH', ROOT_PATH . 'excelFile/');
 		define('LUA_PATH',ROOT_PATH . 'outputLua/');
 		define('XML_PATH', ROOT_PATH . 'outputXml/');
