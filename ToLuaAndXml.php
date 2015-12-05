@@ -7,6 +7,8 @@ error_reporting(E_ALL);
 date_default_timezone_set('Asia/ShangHai');
 /** PHPExcel_IOFactory */
 require_once 'Classes/PHPExcel/IOFactory.php';
+require 'Classes/AppConfig.php';
+AppConfig::Run();
 $file = array(
         'gift'=>"gift.xlsx",
         'work'=>"work.xlsx"
@@ -28,7 +30,7 @@ foreach ($file as $key => $value) {
     fwrite($myFile, "$sheetName = {\n");
     /** 循环读取每个单元格的数据 */
     $str = "";
-    //以map形式的表
+    //以map形式的lua表
     /*
     for ($row = 4; $row <= $highestRow; $row++){//行数是以第1行开始
         $str = "\t[".($row-3)."] = {";
@@ -45,7 +47,7 @@ foreach ($file as $key => $value) {
         $str="";
     }
     */
-    //以List形式输出表
+    //以List形式输出lua表
     for ($column='A'; $column <= $highestColumm; $column++) { 
         $str = "\t".$sheet->getCell($column.(2))." = {";
         for ($row = 4; $row <= $highestRow; $row++) { 
