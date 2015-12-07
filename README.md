@@ -7,7 +7,10 @@ lua配置文件可以list形式或map形式输出
 使用说明
 
 1.确保excel内容和实例中格式一样
+
 2.修改Classes下的AppConfig.php 对应excel及输出lua和xml的文件夹路径
+
 3.配置好要导出的excel
+
 4.终端进入到当前工具目录，输入 php init.php即可
 
