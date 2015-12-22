@@ -55,6 +55,7 @@ class Factory
 	        $str = "";
 	    }
 	    fwrite($luaFile, "}\n");
+	    fwrite($luaFile, "return " . $sheetName);
 	    fclose($luaFile);
 	    echo "$fileName out put succeed\n";
 	}
@@ -76,6 +77,7 @@ class Factory
 	        $str="";
 	    }
 	   	fwrite($luaFile, "}\n");
+	   	fwrite($luaFile, "return " . $sheetName);
 	    fclose($luaFile);
 	    echo "$fileName out put succeed\n";
 	}
